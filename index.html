@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>film dna</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="results/shawshank.json"></script>
+<script src="results/godfather.json"></script>
+<script src="results/darkknight.json"></script>
+<script src="results/beauty.json"></script>
+<script src="results/psycho.json"></script>
+<script src="results/treeoflife.json"></script>
+
+<div class="wrapper">
+    <div class="charts" id="shawshank"></div>
+
+    <div class="charts" id="godfather"></div>
+
+    <div class="charts" id="darkknight"></div>
+
+    <div class="charts" id="beauty"></div>
+
+    <div class="charts" id="psycho"></div>
+
+    <div class="charts" id="treeoflife"></div>
+</div>
+
+<script>
+$(function () {
+    $('#shawshank').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "Shawshank Redemption"
+        },
+
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+
+        series: [{
+            showInLegend: false,
+            data: shawshank_data
+        }]
+    });
+
+    $('#godfather').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "The Godfather"
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+        series: [{
+            showInLegend: false,
+            data: godfather_data
+        }]
+    });
+
+    $('#darkknight').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "The Dark Knight"
+        },
+
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+        series: [{
+            showInLegend: false,
+            data: darkknight_data
+        }]
+    });
+
+    $('#beauty').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "American Beauty"
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+        series: [{
+            showInLegend: false,
+            data: beauty_data
+        }]
+    });
+
+    $('#psycho').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "American Psycho"
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+        series: [{
+            showInLegend: false,
+            data: psycho_data
+        }]
+    });
+
+    $('#treeoflife').highcharts({
+        chart: {
+            type: 'scatter'
+        },
+        title: {
+            text: "Tree of Life"
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: "Time in seconds"
+            }      
+        },
+
+        yAxis: {
+            title: {
+                enabled: true,
+                text: "Emotional Valence"
+            }      
+        },
+        series: [{
+            showInLegend: false,
+            data: treeoflife_data
+        }]
+    });
+});
+
+</script>
+</body>
+</html>
